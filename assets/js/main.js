@@ -108,3 +108,38 @@ type();
 
 
 /****************************************************/
+
+/********************** skills bar **************************/
+
+// Function to start progress bar animation
+function startProgressBarAnimation(progressBar, level) {
+    let width = 0;
+    let id = setInterval(frame, 10);
+
+    function frame() {
+        if (width >= level) {
+            clearInterval(id);
+        } else {
+            width++;
+            progressBar.style.width = width + '%';
+        }
+    }
+}
+
+let progressBars = document.querySelectorAll('.progress-bar');
+
+let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            let level = entry.target.getAttribute('data-level');
+            startProgressBarAnimation(entry.target, level);
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+progressBars.forEach(progressBar => {
+    observer.observe(progressBar);
+});

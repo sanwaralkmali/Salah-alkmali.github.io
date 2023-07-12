@@ -401,14 +401,11 @@ img {
   max-width: 800px;
   margin: auto;
   padding: 20px;
-
-}
-
-.about__intro {
-  font-size: 1.2em;
-  line-height: 1.6;
   color: hwb(0 95% 3%);
+
+
 }
+
 
 .highlight {
   font-weight: 700;
@@ -432,6 +429,116 @@ img {
 }
 
 /*****************************************************/
+
+
+/*****************  Skills  *****************/
+
+.skills{
+  width: 90%;
+  background-color: var(--body-color);
+  margin: auto;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 32px;
+  position: relative;
+  top: -150px;
+  border-radius: 8px;
+  box-shadow: 0 1px 100px rgba(255, 255, 255, 0.1); /* Light shadow */
+
+}
+
+.skills-icons {
+  width: 84px;
+}
+.front-end , .mobile , .teacher{
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+  padding-bottom: 25px;
+
+}
+.skills-container {
+  width: 100%;
+  padding: 2rem 0;
+  
+}
+
+.skills-list{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90%;
+  gap: 1rem;
+
+}
+
+.skill-bar {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.skill-level {
+  margin-left: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.line-space {
+  flex: 0 0 1px;  /* This means the divider won't grow or shrink, and has a base width of 1px */
+  background: #aeaeae; /* Change color as needed */
+  align-self: stretch;
+  height: 100vh;
+  margin: 0 5px; 
+}
+
+/* Change the style for small screens */
+@media screen and (max-width: 600px) {
+  .line-space {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+.progress-bar-container {
+  align-self: flex-start !important;
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  overflow: hidden;
+
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #6c63ff;
+  width: 0;
+}
+
+@media screen and (max-width: 720px) {
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 /* Resposive media  */
 @media screen and (max-width: 320px) {
