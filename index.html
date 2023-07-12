@@ -8,11 +8,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://kit.fontawesome.com/234e9652c2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Salah Alkmali</title>
 </head>
 
 <body>
+
     <nav class="nav" id="nav">
         <div class="nav__menu container" id="nav-menu">
             <div class="nav__shape"></div>
@@ -32,38 +35,56 @@
             <ul class="nav__list">
                 <li class="nav__item">
                     <a href="#home" class="nav__link active-link">
-                        <i class='bx bx-home'></i> Home
+                        <lord-icon src="https://cdn.lordicon.com/etqbfrgp.json" trigger="hover"
+                            colors="outline:#131432,primary:#ffc738,secondary:#4bb3fd,tertiary:#b26836,quaternary:#ebe6ef">
+                        </lord-icon> Home
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="#about" class="nav__link">
-                        <i class='bx bx-user'></i> About
+                        <lord-icon src="https://cdn.lordicon.com/vusrdugn.json" trigger="hover"
+                            colors="primary:#121331,secondary:#b26836,tertiary:#4bb3fd,quaternary:#f9c9c0,quinary:#ebe6ef">
+                        </lord-icon> About
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="#portfolio" class="nav__link">
-                        <i class='bx bx-briefcase-alt-2'></i> Portfolio
+                        <lord-icon src="https://cdn.lordicon.com/rfnfarqt.json" trigger="hover"
+                            colors="outline:#121331,primary:#4bb3fd,secondary:#ffc738">
+                        </lord-icon></i> Portfolio
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="#skills" class="nav__link">
-                        <i class='bx bx-bookmark'></i> Skills
+                        <lord-icon src="https://cdn.lordicon.com/denwspsk.json" trigger="morph"
+                            colors="outline:#121331,primary:#ffc738,tertiary:#4bb3fd,quaternary:#ebe6ef">
+                        </lord-icon> Skills
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="#footer" class="nav__link">
-                        <i class='bx bx-message-square-detail'></i> Contact
+                        <lord-icon src="https://cdn.lordicon.com/lfqstkwj.json" trigger="hover"
+                            colors="outline:#121331,primary:#4bb3fd,secondary:#1d1d1d">
+                        </lord-icon> Contact
                     </a>
                 </li>
             </ul>
         </div>
+
     </nav>
 
     <main class="main" id="main">
+
+        <!--
+            Lighting effect
+                    <div id='spotlight'></div>
+
+        -->
+
         <header class="header" id="header">
             <nav class="header__nav container">
                 <a href="#" class="header__logo">
-                    Salah
+                    <img src="./assets/imges/LOGO-Transparent.png" alt="Salah" width="128px">
                 </a>
 
                 <div class="header__toggle" id="header-toggle">
@@ -72,7 +93,70 @@
             </nav>
         </header>
 
+        <section id="home" class="section home">
+            <div class="home__content">
+                <div class="home__text">
+                    <h1 class="home__title">Designing Future with Code</h1>
+                    <h2 class="home__subtitle">A Full Stack and Mobile Developer
+                        <span id="typingMobil">
+                            <span id="typed-text"></span>
+                            <span id="cursor">|</span>
+                        </span>
+
+                    </h2>
+                </div>
+                <div class="home__img">
+                    <img src="assets/imges/profile.jpg" alt="Your Image" id="myImage">
+                </div>
+                <div class="home__socials">
+                    <a href="your-linkedin-url" class="home__social-link">LinkedIn</a>
+                    <a href="your-github-url" class="home__social-link">GitHub</a>
+                    <a href="your-twitter-url" class="home__social-link">Twitter</a>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="shape">
+            <img src="assets/imges/salah.png" alt="">
+        </div>
+
+        <section id="about" class="about section">
+            <div class="section__title">Who I am</div>
+            <div class="section__content">
+                <div class="about__intro">
+                    <p>
+                        Hello! I'm <span class="highlight">Salah Alkmali</span>, a code wizard and educator. <br> 
+                        For 5 years, I've been transforming the way we learn and love code. <br> <br>
+                        <span class="highlight">My mission: </span> building educational tools that make learning to code a
+                        thrill. If you need a digital inspiration or coding assistance, you're in the right place.
+                        Welcome to my world of creativity and curiosity
+                </div>
+            </div>
+        </section>
+
+
+
         
+
+
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+
+
     </main>
 </body>
 
