@@ -143,3 +143,8 @@ let observer = new IntersectionObserver((entries, observer) => {
 progressBars.forEach(progressBar => {
     observer.observe(progressBar);
 });
+
+
+/************************************************************************ */
+
+/********************** projects **************************/

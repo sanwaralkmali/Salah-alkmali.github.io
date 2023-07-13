@@ -5,17 +5,19 @@
 
 /* Variables */
 :root {
-  --header-height: 3.5rem;
+  --body-color: hsl(210, 12%, 8%);
+  --header-color: linear-gradient(221deg, hsl(0, 0%, 8%) -2%, hsl(120, 1%, 15%) 97%);
+  --nav-color: hsl(254, 42%, 26%);
   --body-color-dark: hwb(216 7% 91%);
   --first-color: hsl(210, 17%, 98%);
   --first-color-shape: hsl(210, 7%, 65%);
   --title-color: hsl(210, 100%, 100%);
   --text-color: hsl(210, 65%, 85%);
-  --body-color: hsl(210, 12%, 8%);
   --container-color: hsl(210, 18%, 15%);
   --title-color-dark: hsl(210, 100%, 95%);
   --text-color-dark: hsl(210, 56%, 83%);
   --container-color-dark: hsl(210, 30%, 22%);
+  --header-height: 5rem;
   --body-font: 'Cairo', sans-serif;
   --big-font-size: 1.5rem;
   --normal-font-size: .938rem;
@@ -80,7 +82,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #7959e1;
+  background-color: var(--nav-color);
 
 
 }
@@ -228,7 +230,7 @@ img {
 /* Show Menu Header */
 .header {
   width: 100%;
-  background: linear-gradient(221deg, #151515 -2%, rgb(38, 39, 38) 97%);
+  background: var(--header-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -433,7 +435,8 @@ img {
 
 /*****************  Skills  *****************/
 
-.skills{
+.skills {
+
   width: 90%;
   background-color: var(--body-color);
   margin: auto;
@@ -445,14 +448,18 @@ img {
   position: relative;
   top: -150px;
   border-radius: 8px;
-  box-shadow: 0 1px 100px rgba(255, 255, 255, 0.1); /* Light shadow */
+  box-shadow: 0 1px 100px rgba(255, 255, 255, 0.1);
+  /* Light shadow */
 
 }
 
 .skills-icons {
   width: 84px;
 }
-.front-end , .mobile , .teacher{
+
+.front-end,
+.mobile,
+.teacher {
   max-width: 380px;
   display: flex;
   flex-direction: column;
@@ -463,13 +470,14 @@ img {
   padding-bottom: 25px;
 
 }
+
 .skills-container {
   width: 100%;
   padding: 2rem 0;
-  
+
 }
 
-.skills-list{
+.skills-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -502,11 +510,11 @@ img {
 }
 
 .line-space {
-  flex: 0 0 1px;  /* This means the divider won't grow or shrink, and has a base width of 1px */
-  background: #aeaeae; /* Change color as needed */
+  flex: 0 0 1px;
+  background: #aeaeae;
   align-self: stretch;
   height: 100vh;
-  margin: 0 5px; 
+  margin: 0 5px;
 }
 
 /* Change the style for small screens */
@@ -532,6 +540,191 @@ img {
   background-color: #6c63ff;
   width: 0;
 }
+
+/***********************************************/
+
+/***************** Experience *****************/
+/* Timeline */
+
+.experience {
+  max-width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  position: relative;
+}
+
+.about__timeline {
+  margin-top: 50px;
+}
+
+.center {
+  padding: 16px;
+  font-size: 2.25rem;
+
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: var(--container-color);
+  border-radius: 10px;
+  position: relative;
+  max-width: 650px;
+  padding-bottom: 28px;
+}
+
+.timeline-item:hover {
+  --container-color: hsl(210, 19%, 19%);
+  cursor: pointer;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background: #aa55e6;
+}
+
+.experience-time {
+  color: #b0b0b0;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90%;
+  gap: 0.2rem;
+  margin: auto;
+  list-style: unset;
+  font-size: 0.75rem;
+}
+
+/**********************************************/
+
+
+
+/*****************  Projects  *****************/
+
+.portofilo {
+  margin: 64px auto;
+  display: flex;
+  padding: 5%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  background: var(--header-color);
+
+
+}
+.cards-row{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.card {
+  position: relative;
+  width: 520px;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding: 1em;
+  background-color: #222;
+  color: #fff;
+  border-right: 15px solid #555;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  background-color: rgba(178, 221, 247, 0.793);
+  color: var(--body-color-dark);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card-img {
+  opacity: 0.1;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.card-description {
+  font-size: 16px;
+  text-align: center;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #49696abc;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.tag:hover {
+  background-color: #334b4c;
+  color: white;
+}
+
+.card {
+ 
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+}
+
+
 
 @media screen and (max-width: 720px) {
   .skills {
