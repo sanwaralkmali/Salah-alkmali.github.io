@@ -1,6 +1,5 @@
 /************** Spotlight ****************************/
 
-/*
 const spotlight = document.querySelector('#spotlight');
 let spotXpos = 0;
 
@@ -8,7 +7,6 @@ window.addEventListener('mousemove', e => {
     spotlight.style.left = e.pageX + spotXpos + 'px';
     spotlight.style.top = e.pageY + 'px';
 });
-*/
 /****************************************************/
 
 
@@ -148,3 +146,7 @@ progressBars.forEach(progressBar => {
 /************************************************************************ */
 
 /********************** projects **************************/
+
+document.getElementById('footer').addEventListener('wheel', function(e) {
+    e.preventDefault();
+}, { passive: false });
