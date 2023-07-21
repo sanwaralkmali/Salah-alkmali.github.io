@@ -146,21 +146,3 @@ progressBars.forEach(progressBar => {
 /************************************************************************ */
 
 /********************** projects **************************/
-
-document.getElementById('footer').addEventListener('wheel', function(e) {
-    e.preventDefault();
-}, { passive: false });
-
-/********************** Model ***********************************/
-let isModelOpen = false;
-
-document.getElementById('showFormButton').onclick = function() {
-    isModelOpen = !isModelOpen;
-    document.getElementById('contactForm').style.display = isModelOpen ? 'block' : 'none';
-  };
-
-    document.getElementById('sendEmailSubmit').onclick = function(e) {
-        e.preventDefault();
-        isModelOpen = !isModelOpen;
-        document.getElementById('contactForm').style.display = isModelOpen ? 'block' : 'none';
-    };
